@@ -4,17 +4,15 @@ import GridGifItem from './GridGifItem';
 
 const GifGrid = ({category}) => {
 
-    const {data, loading} = useFetchGifs(category);
-    console.log(loading);
-    
+    const {data: images, loading} = useFetchGifs(category);
 
     return (
         <>
-            <h3> { category } </h3>
-           {loading && <p>Loading...</p>}
+            <h3 className="animate__animated animate__fadeIn"> { category } </h3>
+           {loading && <p className="animate__animated animate__flash">Loading...</p>}
            <div className="card-grid">
                 {
-                    data.map( img => 
+                    images.map( img => 
                     <GridGifItem 
                         key={img.id} 
                         { ...img }
