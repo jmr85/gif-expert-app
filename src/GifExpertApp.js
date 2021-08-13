@@ -8,6 +8,9 @@ const GifExpertApp = () => {
      
     return (
         <div>
+            <a href="https://github.com/jmr85/gif-expert-app">
+                <i class="fab fa-github"></i> 
+            </a>
             <h2>GifExpertApp</h2>    
             <AddCategory setCategories={setCategories}/>
             <hr/>
