@@ -3,7 +3,7 @@ import React from 'react'
 function GridGifItem({title, url}) {
 
     return (
-        <div>
+        <div className="card">
             <p>{title}</p>
             <img src={url} alt={title}/>
         </div>
